@@ -9,7 +9,7 @@
     @vite('resources/js/app.jsx')
     @routes
     @inertiaHead
-    <title>Document</title>
+    {{-- <title>Document</title> --}}
 </head>
 
 <body>

@@ -1,9 +1,13 @@
-import { useForm } from "@inertiajs/react";
+import { Head, useForm, usePage } from "@inertiajs/react";
 
 const Create = () => {
     const { data, setData, post, errors, processing } = useForm({
         body: "",
     });
+
+    const { component } = usePage();
+
+    console.log(component);
 
     // console.log(useForm());
 
@@ -16,6 +20,8 @@ const Create = () => {
 
     return (
         <>
+            <Head title={component} />
+
             <h1 className="title">Create a new post</h1>
             {/* {data.body} */}
 
