@@ -1,4 +1,4 @@
-import { Head, useForm, usePage } from "@inertiajs/react";
+import { Head, Link, useForm, usePage } from "@inertiajs/react";
 import { useRoute } from "../../../vendor/tightenco/ziggy";
 
 const Show = ({ post }) => {
@@ -31,6 +31,16 @@ const Show = ({ post }) => {
                             Delete
                         </button>
                     </form>
+                    {/* <Link
+                        href={`/posts/${post.id}/edit`}
+                        className="bg-green-500 rounded-md text-sm px-4 py-1 text-white"
+                    > */}
+                    <Link
+                        href={route("posts.edit", post)}
+                        className="bg-green-500 rounded-md text-sm px-4 py-1 text-white"
+                    >
+                        Update
+                    </Link>
                 </div>
             </div>
         </>
